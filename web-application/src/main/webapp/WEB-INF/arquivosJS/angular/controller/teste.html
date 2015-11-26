@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<ul class="pagination ng-table-pagination">
+		<li
+			ng-class="{'disabled': !page.active &amp;&amp; !page.current, 'active': page.current}"
+			ng-repeat="page in pages" ng-switch="page.type" class="ng-scope">
+			<a ng-switch-when="prev" ng-click="params.page(page.number)" href=""
+			class="ng-scope">«</a>
+		</li>
+		<li
+			ng-class="{'disabled': !page.active &amp;&amp; !page.current, 'active': page.current}"
+			ng-repeat="page in pages" ng-switch="page.type" class="ng-scope">
+			<a ng-switch-when="first" ng-click="params.page(page.number)" href=""
+			class="ng-scope"> <span ng-bind="page.number" class="ng-binding">1</span>
+		</a>
+		</li>
+		<!-- end ngRepeat: page in pages -->
+		<li
+			ng-class="{'disabled': !page.active &amp;&amp; !page.current, 'active': page.current}"
+			ng-repeat="page in pages" ng-switch="page.type"
+			class="ng-scope disabled">
+			<!-- ngSwitchWhen: prev --> <!-- ngSwitchWhen: first --> <!-- ngSwitchWhen: page -->
+			<!-- ngSwitchWhen: more -->
+			<a ng-switch-when="more" ng-click="params.page(page.number)" href=""
+			class="ng-scope">…</a> <!-- ngSwitchWhen: last --> <!-- ngSwitchWhen: next -->
+		</li>
+		<!-- end ngRepeat: page in pages -->
+		<li
+			ng-class="{'disabled': !page.active &amp;&amp; !page.current, 'active': page.current}"
+			ng-repeat="page in pages" ng-switch="page.type" class="ng-scope">
+			<!-- ngSwitchWhen: prev --> <!-- ngSwitchWhen: first --> <!-- ngSwitchWhen: page -->
+			<a ng-switch-when="page" ng-click="params.page(page.number)" href=""
+			class="ng-scope"><span ng-bind="page.number" class="ng-binding">6</span></a>
+			<!-- ngSwitchWhen: more --> <!-- ngSwitchWhen: last --> <!-- ngSwitchWhen: next -->
+		</li>
+		<!-- end ngRepeat: page in pages -->
+		<li
+			ng-class="{'disabled': !page.active &amp;&amp; !page.current, 'active': page.current}"
+			ng-repeat="page in pages" ng-switch="page.type" class="ng-scope">
+			<!-- ngSwitchWhen: prev --> <!-- ngSwitchWhen: first --> <!-- ngSwitchWhen: page -->
+			<a ng-switch-when="page" ng-click="params.page(page.number)" href=""
+			class="ng-scope"><span ng-bind="page.number" class="ng-binding">7</span></a>
+			<!-- ngSwitchWhen: more --> <!-- ngSwitchWhen: last --> <!-- ngSwitchWhen: next -->
+		</li>
+		<!-- end ngRepeat: page in pages -->
+		<li
+			ng-class="{'disabled': !page.active &amp;&amp; !page.current, 'active': page.current}"
+			ng-repeat="page in pages" ng-switch="page.type"
+			class="ng-scope active">
+			<!-- ngSwitchWhen: prev --> <!-- ngSwitchWhen: first --> <!-- ngSwitchWhen: page -->
+			<a ng-switch-when="page" ng-click="params.page(page.number)" href=""
+			class="ng-scope"><span ng-bind="page.number" class="ng-binding">8</span></a>
+			<!-- ngSwitchWhen: more --> <!-- ngSwitchWhen: last --> <!-- ngSwitchWhen: next -->
+		</li>
+		<!-- end ngRepeat: page in pages -->
+		<li
+			ng-class="{'disabled': !page.active &amp;&amp; !page.current, 'active': page.current}"
+			ng-repeat="page in pages" ng-switch="page.type" class="ng-scope">
+			<!-- ngSwitchWhen: prev --> <!-- ngSwitchWhen: first --> <!-- ngSwitchWhen: page -->
+			<a ng-switch-when="page" ng-click="params.page(page.number)" href=""
+			class="ng-scope"><span ng-bind="page.number" class="ng-binding">9</span></a>
+			<!-- ngSwitchWhen: more --> <!-- ngSwitchWhen: last --> <!-- ngSwitchWhen: next -->
+		</li>
+		<!-- end ngRepeat: page in pages -->
+		<li
+			ng-class="{'disabled': !page.active &amp;&amp; !page.current, 'active': page.current}"
+			ng-repeat="page in pages" ng-switch="page.type" class="ng-scope">
+			<!-- ngSwitchWhen: prev --> <!-- ngSwitchWhen: first --> <!-- ngSwitchWhen: page -->
+			<a ng-switch-when="page" ng-click="params.page(page.number)" href=""
+			class="ng-scope"><span ng-bind="page.number" class="ng-binding">10</span></a>
+			<!-- ngSwitchWhen: more --> <!-- ngSwitchWhen: last --> <!-- ngSwitchWhen: next -->
+		</li>
+		<!-- end ngRepeat: page in pages -->
+		<li
+			ng-class="{'disabled': !page.active &amp;&amp; !page.current, 'active': page.current}"
+			ng-repeat="page in pages" ng-switch="page.type"
+			class="ng-scope disabled">
+			<!-- ngSwitchWhen: prev --> <!-- ngSwitchWhen: first --> <!-- ngSwitchWhen: page -->
+			<!-- ngSwitchWhen: more -->
+			<a ng-switch-when="more" ng-click="params.page(page.number)" href=""
+			class="ng-scope">…</a> <!-- ngSwitchWhen: last --> <!-- ngSwitchWhen: next -->
+		</li>
+		<!-- end ngRepeat: page in pages -->
+		<li
+			ng-class="{'disabled': !page.active &amp;&amp; !page.current, 'active': page.current}"
+			ng-repeat="page in pages" ng-switch="page.type" class="ng-scope">
+			<!-- ngSwitchWhen: prev --> <!-- ngSwitchWhen: first --> <!-- ngSwitchWhen: page -->
+			<!-- ngSwitchWhen: more --> <!-- ngSwitchWhen: last -->
+			<a ng-switch-when="last" ng-click="params.page(page.number)" href=""
+			class="ng-scope"><span ng-bind="page.number" class="ng-binding">63</span></a>
+			<!-- ngSwitchWhen: next -->
+		</li>
+		<!-- end ngRepeat: page in pages -->
+		<li
+			ng-class="{'disabled': !page.active &amp;&amp; !page.current, 'active': page.current}"
+			ng-repeat="page in pages" ng-switch="page.type" class="ng-scope">
+			<!-- ngSwitchWhen: prev --> <!-- ngSwitchWhen: first --> <!-- ngSwitchWhen: page -->
+			<!-- ngSwitchWhen: more --> <!-- ngSwitchWhen: last --> <!-- ngSwitchWhen: next -->
+			<a ng-switch-when="next" ng-click="params.page(page.number)" href=""
+			class="ng-scope">»</a>
+		</li>
+		<!-- end ngRepeat: page in pages -->
+	</ul>
+</body>
+</html>

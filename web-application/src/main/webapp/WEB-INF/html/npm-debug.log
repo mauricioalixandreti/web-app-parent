@@ -1,0 +1,208 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@2.14.7
+3 info using node@v4.2.1
+4 verbose readDependencies loading dependencies from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\package.json
+5 warn package.json sb-admin@0.0.0 No license field.
+6 verbose install where, deps [ 'C:\\Users\\Neudson\\Desktop\\lot\\sb-admin-angular-master',
+6 verbose install   [ 'grunt',
+6 verbose install     'grunt-autoprefixer',
+6 verbose install     'grunt-concurrent',
+6 verbose install     'grunt-contrib-clean',
+6 verbose install     'grunt-contrib-concat',
+6 verbose install     'grunt-contrib-connect',
+6 verbose install     'grunt-contrib-copy',
+6 verbose install     'grunt-contrib-cssmin',
+6 verbose install     'grunt-contrib-htmlmin',
+6 verbose install     'grunt-contrib-imagemin',
+6 verbose install     'grunt-contrib-jshint',
+6 verbose install     'grunt-contrib-uglify',
+6 verbose install     'grunt-contrib-watch',
+6 verbose install     'grunt-filerev',
+6 verbose install     'grunt-google-cdn',
+6 verbose install     'grunt-karma',
+6 verbose install     'grunt-newer',
+6 verbose install     'grunt-ng-annotate',
+6 verbose install     'grunt-svgmin',
+6 verbose install     'grunt-usemin',
+6 verbose install     'jasmine-core',
+6 verbose install     'jshint-stylish',
+6 verbose install     'karma',
+6 verbose install     'karma-jasmine',
+6 verbose install     'karma-phantomjs-launcher',
+6 verbose install     'load-grunt-tasks',
+6 verbose install     'time-grunt' ] ]
+7 verbose install where, peers [ 'C:\\Users\\Neudson\\Desktop\\lot\\sb-admin-angular-master',
+7 verbose install   [] ]
+8 verbose installManyTop reading for lifecycle C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\package.json
+9 info preinstall sb-admin@0.0.0
+10 verbose installManyTop reading scoped package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt\package.json
+11 verbose installManyTop reading scoped package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-autoprefixer\package.json
+12 verbose installManyTop reading scoped package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-concurrent\package.json
+13 verbose installManyTop reading scoped package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-contrib-clean\package.json
+14 verbose installManyTop reading scoped package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-contrib-concat\package.json
+15 verbose installManyTop reading scoped package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-contrib-connect\package.json
+16 verbose installManyTop reading scoped package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-contrib-copy\package.json
+17 verbose installManyTop reading scoped package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-contrib-cssmin\package.json
+18 verbose installManyTop reading scoped package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-contrib-htmlmin\package.json
+19 verbose installManyTop reading scoped package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-contrib-imagemin\package.json
+20 verbose installManyTop reading scoped package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-contrib-jshint\package.json
+21 verbose installManyTop reading scoped package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-contrib-uglify\package.json
+22 verbose installManyTop reading scoped package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-contrib-watch\package.json
+23 verbose installManyTop reading scoped package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-filerev\package.json
+24 verbose installManyTop reading scoped package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-google-cdn\package.json
+25 verbose installManyTop reading scoped package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-karma\package.json
+26 verbose installManyTop reading scoped package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-newer\package.json
+27 verbose installManyTop reading scoped package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-ng-annotate\package.json
+28 verbose installManyTop reading scoped package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-svgmin\package.json
+29 verbose installManyTop reading scoped package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-usemin\package.json
+30 verbose installManyTop reading scoped package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\jasmine-core\package.json
+31 verbose installManyTop reading scoped package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\jshint-stylish\package.json
+32 verbose installManyTop reading scoped package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\karma\package.json
+33 verbose installManyTop reading scoped package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\karma-jasmine\package.json
+34 verbose installManyTop reading scoped package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\karma-phantomjs-launcher\package.json
+35 verbose installManyTop reading scoped package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\load-grunt-tasks\package.json
+36 verbose installManyTop reading scoped package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\time-grunt\package.json
+37 info package.json grunt-google-cdn@0.4.3 license should be a valid SPDX license expression
+38 info package.json karma-phantomjs-launcher@0.1.4 No README data
+39 info package.json grunt-concurrent@0.5.0 No license field.
+40 info package.json grunt@0.4.5 No license field.
+41 info package.json grunt-contrib-clean@0.5.0 No license field.
+42 info package.json grunt-contrib-concat@0.4.0 No license field.
+43 info package.json grunt-contrib-connect@0.7.1 No license field.
+44 info package.json grunt-contrib-copy@0.5.0 No license field.
+45 info package.json grunt-contrib-cssmin@0.9.0 No license field.
+46 info package.json grunt-contrib-htmlmin@0.3.0 No license field.
+47 info package.json grunt-contrib-imagemin@0.7.2 No license field.
+48 info package.json grunt-contrib-watch@0.6.1 No license field.
+49 info package.json grunt-contrib-uglify@0.4.1 No license field.
+50 info package.json grunt-contrib-jshint@0.10.0 No license field.
+51 info package.json grunt-filerev@0.2.1 No license field.
+52 info package.json grunt-newer@0.7.0 No license field.
+53 info package.json grunt-svgmin@0.4.0 No license field.
+54 verbose readDependencies loading dependencies from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\package.json
+55 verbose targetResolver reading package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt\package.json
+56 verbose targetResolver reading package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-autoprefixer\package.json
+57 verbose targetResolver reading package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-concurrent\package.json
+58 verbose targetResolver reading package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-contrib-clean\package.json
+59 verbose targetResolver reading package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-contrib-concat\package.json
+60 verbose targetResolver reading package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-contrib-connect\package.json
+61 verbose targetResolver reading package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-contrib-copy\package.json
+62 verbose targetResolver reading package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-contrib-cssmin\package.json
+63 verbose targetResolver reading package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-contrib-htmlmin\package.json
+64 verbose targetResolver reading package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-contrib-imagemin\package.json
+65 verbose targetResolver reading package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-contrib-jshint\package.json
+66 verbose targetResolver reading package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-contrib-uglify\package.json
+67 verbose targetResolver reading package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-contrib-watch\package.json
+68 verbose targetResolver reading package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-filerev\package.json
+69 verbose targetResolver reading package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-google-cdn\package.json
+70 verbose targetResolver reading package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-karma\package.json
+71 verbose targetResolver reading package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-newer\package.json
+72 verbose targetResolver reading package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-ng-annotate\package.json
+73 verbose targetResolver reading package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-svgmin\package.json
+74 verbose targetResolver reading package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\grunt-usemin\package.json
+75 verbose targetResolver reading package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\jasmine-core\package.json
+76 verbose targetResolver reading package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\jshint-stylish\package.json
+77 verbose targetResolver reading package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\karma\package.json
+78 verbose targetResolver reading package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\karma-jasmine\package.json
+79 verbose targetResolver reading package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\karma-phantomjs-launcher\package.json
+80 verbose targetResolver reading package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\load-grunt-tasks\package.json
+81 verbose targetResolver reading package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\time-grunt\package.json
+82 verbose targetResolver reading package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\.bin\karma\package.json
+83 verbose targetResolver reading package data from C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\node_modules\.bin\karma.cmd\package.json
+84 verbose already installed skipping grunt-contrib-cssmin@^0.9.0 C:\Users\Neudson\Desktop\lot\sb-admin-angular-master
+85 verbose already installed skipping grunt-contrib-htmlmin@^0.3.0 C:\Users\Neudson\Desktop\lot\sb-admin-angular-master
+86 verbose already installed skipping grunt-contrib-imagemin@^0.7.0 C:\Users\Neudson\Desktop\lot\sb-admin-angular-master
+87 verbose already installed skipping grunt-contrib-jshint@^0.10.0 C:\Users\Neudson\Desktop\lot\sb-admin-angular-master
+88 verbose already installed skipping grunt-contrib-uglify@^0.4.0 C:\Users\Neudson\Desktop\lot\sb-admin-angular-master
+89 verbose already installed skipping grunt-contrib-watch@^0.6.1 C:\Users\Neudson\Desktop\lot\sb-admin-angular-master
+90 verbose already installed skipping grunt-filerev@^0.2.1 C:\Users\Neudson\Desktop\lot\sb-admin-angular-master
+91 verbose already installed skipping grunt-google-cdn@^0.4.0 C:\Users\Neudson\Desktop\lot\sb-admin-angular-master
+92 verbose already installed skipping grunt-karma@^0.10.1 C:\Users\Neudson\Desktop\lot\sb-admin-angular-master
+93 verbose already installed skipping grunt-newer@^0.7.0 C:\Users\Neudson\Desktop\lot\sb-admin-angular-master
+94 verbose already installed skipping grunt-ng-annotate@^0.10.0 C:\Users\Neudson\Desktop\lot\sb-admin-angular-master
+95 verbose already installed skipping grunt-svgmin@^0.4.0 C:\Users\Neudson\Desktop\lot\sb-admin-angular-master
+96 verbose already installed skipping grunt-usemin@^2.1.1 C:\Users\Neudson\Desktop\lot\sb-admin-angular-master
+97 verbose already installed skipping jasmine-core@^2.1.3 C:\Users\Neudson\Desktop\lot\sb-admin-angular-master
+98 verbose already installed skipping jshint-stylish@^0.2.0 C:\Users\Neudson\Desktop\lot\sb-admin-angular-master
+99 verbose already installed skipping karma@^0.12.31 C:\Users\Neudson\Desktop\lot\sb-admin-angular-master
+100 verbose already installed skipping karma-jasmine@^0.3.5 C:\Users\Neudson\Desktop\lot\sb-admin-angular-master
+101 verbose already installed skipping karma-phantomjs-launcher@^0.1.4 C:\Users\Neudson\Desktop\lot\sb-admin-angular-master
+102 verbose already installed skipping load-grunt-tasks@^0.4.0 C:\Users\Neudson\Desktop\lot\sb-admin-angular-master
+103 verbose already installed skipping time-grunt@^0.3.1 C:\Users\Neudson\Desktop\lot\sb-admin-angular-master
+104 verbose already installed skipping grunt@^0.4.1 C:\Users\Neudson\Desktop\lot\sb-admin-angular-master
+105 verbose already installed skipping grunt-autoprefixer@^0.7.3 C:\Users\Neudson\Desktop\lot\sb-admin-angular-master
+106 verbose already installed skipping grunt-concurrent@^0.5.0 C:\Users\Neudson\Desktop\lot\sb-admin-angular-master
+107 verbose already installed skipping grunt-contrib-clean@^0.5.0 C:\Users\Neudson\Desktop\lot\sb-admin-angular-master
+108 verbose already installed skipping grunt-contrib-concat@^0.4.0 C:\Users\Neudson\Desktop\lot\sb-admin-angular-master
+109 verbose already installed skipping grunt-contrib-connect@^0.7.1 C:\Users\Neudson\Desktop\lot\sb-admin-angular-master
+110 verbose already installed skipping grunt-contrib-copy@^0.5.0 C:\Users\Neudson\Desktop\lot\sb-admin-angular-master
+111 silly install resolved []
+112 info build C:\Users\Neudson\Desktop\lot\sb-admin-angular-master
+113 info linkStuff sb-admin@0.0.0
+114 silly linkStuff sb-admin@0.0.0 has C:\Users\Neudson\Desktop\lot as its parent node_modules
+115 verbose linkBins sb-admin@0.0.0
+116 verbose linkMans sb-admin@0.0.0
+117 verbose rebuildBundles sb-admin@0.0.0
+118 verbose rebuildBundles [ '.bin',
+118 verbose rebuildBundles   'grunt',
+118 verbose rebuildBundles   'grunt-autoprefixer',
+118 verbose rebuildBundles   'grunt-concurrent',
+118 verbose rebuildBundles   'grunt-contrib-clean',
+118 verbose rebuildBundles   'grunt-contrib-concat',
+118 verbose rebuildBundles   'grunt-contrib-connect',
+118 verbose rebuildBundles   'grunt-contrib-copy',
+118 verbose rebuildBundles   'grunt-contrib-cssmin',
+118 verbose rebuildBundles   'grunt-contrib-htmlmin',
+118 verbose rebuildBundles   'grunt-contrib-imagemin',
+118 verbose rebuildBundles   'grunt-contrib-jshint',
+118 verbose rebuildBundles   'grunt-contrib-uglify',
+118 verbose rebuildBundles   'grunt-contrib-watch',
+118 verbose rebuildBundles   'grunt-filerev',
+118 verbose rebuildBundles   'grunt-google-cdn',
+118 verbose rebuildBundles   'grunt-karma',
+118 verbose rebuildBundles   'grunt-newer',
+118 verbose rebuildBundles   'grunt-ng-annotate',
+118 verbose rebuildBundles   'grunt-svgmin',
+118 verbose rebuildBundles   'grunt-usemin',
+118 verbose rebuildBundles   'jasmine-core',
+118 verbose rebuildBundles   'jshint-stylish',
+118 verbose rebuildBundles   'karma',
+118 verbose rebuildBundles   'karma-jasmine',
+118 verbose rebuildBundles   'karma-phantomjs-launcher',
+118 verbose rebuildBundles   'load-grunt-tasks',
+118 verbose rebuildBundles   'time-grunt' ]
+119 info install sb-admin@0.0.0
+120 info postinstall sb-admin@0.0.0
+121 verbose unsafe-perm in lifecycle true
+122 info sb-admin@0.0.0 Failed to exec postinstall script
+123 verbose stack Error: sb-admin@0.0.0 postinstall: `bower install`
+123 verbose stack Exit status 1
+123 verbose stack     at EventEmitter.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\lifecycle.js:214:16)
+123 verbose stack     at emitTwo (events.js:87:13)
+123 verbose stack     at EventEmitter.emit (events.js:172:7)
+123 verbose stack     at ChildProcess.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\spawn.js:24:14)
+123 verbose stack     at emitTwo (events.js:87:13)
+123 verbose stack     at ChildProcess.emit (events.js:172:7)
+123 verbose stack     at maybeClose (internal/child_process.js:818:16)
+123 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+124 verbose pkgid sb-admin@0.0.0
+125 verbose cwd C:\Users\Neudson\Desktop\lot\sb-admin-angular-master\app
+126 error Windows_NT 6.2.9200
+127 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+128 error node v4.2.1
+129 error npm  v2.14.7
+130 error code ELIFECYCLE
+131 error sb-admin@0.0.0 postinstall: `bower install`
+131 error Exit status 1
+132 error Failed at the sb-admin@0.0.0 postinstall script 'bower install'.
+132 error This is most likely a problem with the sb-admin package,
+132 error not with npm itself.
+132 error Tell the author that this fails on your system:
+132 error     bower install
+132 error You can get their info via:
+132 error     npm owner ls sb-admin
+132 error There is likely additional logging output above.
+133 verbose exit [ 1, true ]

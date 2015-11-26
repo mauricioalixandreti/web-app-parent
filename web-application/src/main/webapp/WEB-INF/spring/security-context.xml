@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- - Sample namespace-based configuration - -->
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+                           http://www.springframework.org/schema/security
+                           http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+	<http auto-config='true' use-expressions="true">
+		<form-login login-page="/login" 
+			default-target-url="/"
+			always-use-default-target="true" 
+			authentication-failure-url="/login?erro=true" />
+		<logout logout-url="/logout" />
+		<intercept-url pattern="/restrito/**" access="isFullyAuthenticated()" />
+		<access-denied-handler error-page="/denied" />
+	</http>
+	<global-method-security pre-post-annotations="enabled" />
+
+	<beans:bean id="userdetail"
+		class="br.com.pactomais.security.UserSecurityService" />
+
+	<beans:bean
+		class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler" />
+
+	<authentication-manager>
+		<authentication-provider user-service-ref="userdetail">
+			<password-encoder hash="sha" />
+		</authentication-provider>
+	</authentication-manager>
+
+</beans:beans>

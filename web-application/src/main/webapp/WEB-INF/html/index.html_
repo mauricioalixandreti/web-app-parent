@@ -1,0 +1,499 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta name='viewport' content='width=device-width,initial-scale=1'></meta>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>Cambi F&#225;cil</title>
+<link rel="shortcut icon" type="image/png"
+	href="resources/imagens/favicon.ico" />
+
+<!-- OS CSS ENTRAM AQUI -->
+
+
+<link rel="stylesheet" href="resources/css/popup-sugestao.css"></link>
+
+<link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css"></link>
+<link rel="stylesheet"
+	href="resources/bootstrap/css/bootstrap-responsive.min.css"></link>
+
+
+
+<link rel="stylesheet" href="resources/css/style.css" />
+
+<link rel="stylesheet" href="resources/css/style_mobile.css"
+	media="(max-width: 765px)"></link>
+
+
+<style>
+@media ( max-width : 400px) {
+	div#ctr {
+		width: auto;
+		margin-top: 50px;
+		margin-left: 10px;
+		margin-right: 10px;
+		position: relative;
+		margin-right: 10px;
+		/* 	height: 200px; */
+		/* 	margin-left: -300px; metade da largura */
+		/* 	position: absolute; */
+		/* 	top: 150px; */
+		/* 	left: 50%; */
+	}
+	.logo-init {
+		height: 30px;
+	}
+	#field-2 {
+		width: 96%;
+	}
+}
+
+@media ( max-height : 800px) {
+	div#marca-footer {
+		/* 		display: none; */
+
+	}
+}
+</style>
+
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script', '//www.google-analytics.com/analytics.js',
+			'ga');
+
+	ga('create', 'UA-68626802-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+</head>
+<body ng-app="qualMeuRemedioApp" ng-controller="produtoController"
+	data-ng-init="schShow=false;pageInitShow=true;showDialog=false;">
+
+	<div id="header">
+
+
+		<div align="right" class="link-informativo" style="float: right;">
+			<a href="#" style="color: #3787AA;" ng-click="showDialog=true">{{'o_que_e_intercabialidade'
+				| translate}}</a>
+
+		</div>
+
+	</div>
+
+	<div id="content">
+		<form class="form-search" name="buscaProdutoForm">
+
+			<div>
+
+				<div id="sch" ng-show="schShow" class="invisible">
+
+
+					<div class="form-search">
+
+						<div id="sch-tit"></div>
+
+
+						<div id="sch-fld">
+
+							<div id="tit">
+								<a href="#" onClick="window.location.reload(true);"><img
+									id="sch-tit" src="resources/imagens/cambifacil-small.png" /> </a>
+							</div>
+
+							<div id="erro" style="margin-bottom: 34px;">
+								<font ng-show="erroDadosNaoEncontrados();" class="span-error">{{'erro_informe_parametro'
+									| translate }}</font> <font ng-show="erroFaltaParametro();"
+									class="span-error">{{'erro_parametro_nao_encontrado' |
+									translate }}</font>
+							</div>
+
+							<div style="width: 100%">
+
+
+								<!-- 								<br/> -->
+
+								<div>
+
+									<div id="searchContainer">
+										<input id="field-2" name="field" type="text"
+											ng-model="parametro"
+											placeholder="Informe o rem&#233;dio ou princ&#237;pio ativo" />
+										<!-- 									<div id="delete"> -->
+										<!-- 										<span id="x">x</span> -->
+										<!-- 									</div> -->
+									</div>
+
+
+									<!-- 								<div class="input-busca-2"> -->
+
+									<!-- 									<input id="sch-parametro" -->
+									<!-- 										placeholder="Informe o rem&#233;dio ou princ&#237;pio ativo" -->
+									<!-- 										class="input-xxlarge search-query" ng-model="parametro"></input> -->
+
+									<!-- 								</div> -->
+
+									<div class="sch-bts">
+										<input id="sch-busca-remedio" class="" type="submit"
+											value=" {{'buscar' | translate}} "
+											ng-click="buscaProduto(buscaProdutoForm, false);"></input>
+
+										<button id="sch-lista-todos" ng-click="listar();" class="">{{'listar_todos'
+											| translate }}</button>
+									</div>
+
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+
+
+					<div id="sch-rst">
+
+
+
+
+
+						<div ng-show="possuiItens();">
+
+							<div
+								style="margin-left: 10px; margin-top: 15px; font-size: 12px !important;">
+								<span style="font-weight: bold; color: #616060">{{'qtde_remedio_encontrados'
+									| translate}}</span> <span style="color: #08c" ng-bind="tbTotalItens"></span>
+								<br /> <span style="font-weight: bold; color: #616060">{{'qtde_paginas'
+									| translate}}</span> <span style="color: #08c" ng-bind="tbTotalPag"></span>
+							</div>
+
+							<div id="pagination1" class="pagination"></div>
+
+							<div class="table-responsive table-scroll">
+								<table id="table-pagination"
+									class="table table-striped  header-fixed table-bordered"
+									at-list="page.itens" at-config="config">
+									<caption>{{'remedio_intercambiaveis' | translate}}</caption>
+									<thead>
+										<tr style="color: white;">
+											<th><a href="" ng-click="order('referencia')">{{'referencia'
+													| translate }}</a><span class="sortorder"
+												ng-class="{reverse:reverse && predicate === 'referencia', 'sortorder-select': predicate === 'referencia'}"></span></th>
+											<th><a href="" ng-click="order('principioAtivo')">{{'principio_ativo'
+													| translate}}</a><span class="sortorder"
+												ng-class="{reverse:reverse && predicate === 'principioAtivo', 'sortorder-select': predicate === 'principioAtivo'}"></span></th>
+											<th><a href="" ng-click="order('nomeSimilar')">{{'nome_similar'
+													| translate}}</a><span class="sortorder"
+												ng-class="{reverse:reverse && predicate === 'nomeSimilar', 'sortorder-select': predicate === 'nomeSimilar'}"></span></th>
+											<th><a href=""
+												ng-click="order('detentorRemedioSimilar')">{{'detentor_remedio_similar'
+													| translate}}</a><span class="sortorder"
+												ng-class="{reverse:reverse && predicate === 'detentorRemedioSimilar', 'sortorder-select': predicate === 'detentorRemedioSimilar'}"></span></th>
+											<th><a href="" ng-click="order('formaFarmaceutica')">{{'forma_farmaceutica'
+													| translate}}</a><span class="sortorder"
+												ng-class="{reverse:reverse && predicate === 'formaFarmaceutica', 'sortorder-select': predicate === 'formaFarmaceutica'}"></span></th>
+											<th><a href="" ng-click="order('concentracao')">{{'concentracao'
+													| translate}}</a><span class="sortorder"
+												ng-class="{reverse:reverse && predicate === 'concentracao', 'sortorder-select': predicate === 'concentracao'}"></span></th>
+											<th><a href="" ng-click="order('data')">{{'data' |
+													translate}}</a><span class="sortorder"
+												ng-class="{reverse:reverse && predicate === 'data', 'sortorder-select': predicate === 'data'}"></span></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr ng-repeat="item in page.itens">
+											<td class="col-md-2"><span
+												ng-class="destacaPalavra(item.referencia)">{{
+													item.referencia }}</span></td>
+											<td class="col-md-2"><span
+												ng-class="destacaPalavra(item.principioAtivo)">{{
+													item.principioAtivo }}</span></td>
+											<td class="col-md-2"><span
+												ng-class="destacaPalavra(item.nomeSimilar)">{{
+													item.nomeSimilar }}</span></td>
+											<td class="col-md-2">{{ item.detentorRemedioSimilar }}</td>
+											<td class="col-md-2">{{ item.formaFarmaceutica }}</td>
+											<td class="col-md-2">{{ item.concentracao }}</td>
+											<td class="col-md-4">{{item.data| date:
+												'dd/MM/yyyy&emsp;&emsp;&emsp;&emsp;'}}</td>
+										</tr>
+									</tbody>
+
+								</table>
+							</div>
+
+
+
+							<div
+								style="margin-left: 10px; margin-top: 15px; font-size: 12px !important;">
+								<span style="font-weight: bold; color: #616060">{{'qtde_remedio_encontrados'
+									| translate}}</span> <span style="color: #08c" ng-bind="tbTotalItens"></span>
+								<br /> <span style="font-weight: bold; color: #616060">{{'qtde_paginas'
+									| translate}}</span> <span style="color: #08c" ng-bind="tbTotalPag"></span>
+							</div>
+							<div id="pagination2" class="pagination"></div>
+
+						</div>
+
+						<div align="left" id="dv-duvida"
+							style="margin-bottom: 150px; margin-top: 28px; padding: 8px; font-size: 12px; position: absolute;">
+							<span>D&uacute;vidas ou maiores esclarecimentos sobre como
+								realizar a intercambialidade </span><a target="_blank"
+								style="color: #3787AA;"
+								href="http://portal.anvisa.gov.br/wps/content/Anvisa+Portal/Anvisa/Inicio/Medicamentos/Assunto+de+Interesse/Medicamentos+similares">CLIQUE
+								AQUI</a> <span> e acesse a lista oficial no site da Anvisa.</span>
+						</div>
+					</div>
+
+				</div>
+
+
+
+				<div id="pageInit" align="center" ng-show="pageInitShow">
+					<div align="left" id="ctr">
+
+						<div id="tit">
+							<a href="#" onClick="window.location.reload(true);"> <img
+								class="logo-init" src="resources/imagens/cambifacil.png" /></a>
+						</div>
+
+						<div id="erro1" class="invisible">
+							<font ng-show="erroDadosNaoEncontrados();" class="span-error">{{'erro_informe_parametro'
+								| translate}}</font> <font ng-show="erroFaltaParametro();"
+								class="span-error">{{'erro_parametro_nao_encontrado' |
+								translate}}</font>
+						</div>
+
+
+						<div id="searchContainer">
+							<input id="field" name="field" type="text" ng-model="parametro"
+								placeholder="Informe o rem&#233;dio ou princ&#237;pio ativo" />
+							<!-- 							<div id="delete"> -->
+							<!-- 								<span id="x">x</span> -->
+							<!-- 							</div> -->
+						</div>
+
+
+						<!-- 						<div id="fld" class="control-group info"> -->
+						<!-- 							<div id="btn-inner" class="controls"> -->
+						<!-- 								<input id="ctr-parametro" -->
+						<!-- 									placeholder="Informe o rem&#233;dio ou princ&#237;pio ativo" -->
+						<!-- 									class="input-xxlarge search-query" ng-model="parametro"></input> -->
+						<!-- 							</div> -->
+						<!-- 						</div> -->
+
+						<div align="right" id="btn">
+							<div id="btn-inner">
+								<input id="ctr-busca-remedio" class="" type="submit"
+									value=" {{'buscar' | translate}} "
+									ng-click="buscaProduto(buscaProdutoForm, false);"></input> <input
+									id="ctr-lista-todos" class="" type="submit"
+									value="  {{'listar_todos' | translate}}  " ng-click="listar();"></input>
+							</div>
+						</div>
+
+
+
+
+					</div>
+
+
+
+					<div align="center" id="dv-duvida"
+						style="margin-top: 150px; padding: 8px; font-size: 12px;">
+						<span>D&uacute;vidas ou maiores esclarecimentos sobre como
+							realizar a intercambialidade </span><a target="_blank"
+							style="color: #3787AA;"
+							href="http://portal.anvisa.gov.br/wps/content/Anvisa+Portal/Anvisa/Inicio/Medicamentos/Assunto+de+Interesse/Medicamentos+similares">CLIQUE
+							AQUI</a> <span> e acesse a lista oficial no site da Anvisa.</span>
+						<p style="font-size: 11px; color: #BF800B;">Farmac&#234;utico
+							Respons&#225;vel: Vanessa Silva Pinto - Farmac&#234;utica
+							Generalista - CRF:4427/PB</p>
+					</div>
+				</div>
+
+
+
+
+
+
+
+			</div>
+		</form>
+
+
+		<div modal-show="showDialog" class="modal123 fade">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+
+					<div align="right" style="margin-top: 10px; margin-right: 20px;">
+						<a ng-click="showDialog=false" href="#"
+							style="font-weight: bold; font-size: 18px;">X</a>
+					</div>
+
+					<div class="text-poppup-info">
+						<div>
+							<div>
+								<div class="title-info-popup">
+									<span>{{'o_que_e_intercabialidade' | translate}}</span>
+								</div>
+								<div class="div-bootom-title-info-popup"></div>
+							</div>
+
+							<div style="padding: 30px;">
+
+								<div style="margin-bottom: 20px">{{'paragrafo1_o_que_e_intercambialidade'
+									| translate}}</div>
+
+								<div style="margin-bottom: 20px">{{'paragrafo2_o_que_e_intercambialidade'
+									| translate}}</div>
+
+								<div style="margin-bottom: 20px">{{'paragrafo3_o_que_e_intercambialidade'
+									| translate}}</div>
+
+							</div>
+						</div>
+
+						<div>
+							<div>
+								<div class="title-info-popup">
+									<span>{{'como_funciona' | translate}}</span>
+								</div>
+								<div class="div-bootom-title-info-popup"></div>
+							</div>
+
+							<div style="padding: 30px;">
+
+								<div>{{'paragrafor1_como_funciona' | translate}}</div>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+
+	<div id="footer" style="width: 100%" ng-show="footer">
+
+		<div class="container navbar-fixed-bottom" style="width: 100%">
+
+			<div id="marca-footer" align="left">
+
+				<a href="http://www.clubemultifar.com.br" target="_blank"> <img
+					src="resources/imagens/pactomais.png" style="margin-right: 40px;" /></a>
+				<a href="http://www.clubemultifar.com.br" target="_blank"> <img
+					src="resources/imagens/clube.png" style="margin-right: 40px;" /></a> <a
+					href="https://www.lembredoremedio.com.br" target="_blank"> <img
+					src="resources/imagens/ldr.png" style="margin-right: 40px;" /></a> <a
+					href="https://www.suareceitadigital.com.br" target="_blank"> <img
+					src="resources/imagens/srd.png" style="margin-right: 40px;" /></a>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- JAVASCRIPTS AQUI -->
+
+
+	<script src="resources/js/jquery-2.1.4.min.js"></script>
+	<script src="resources/js/angular.min.js"></script>
+	<script src="resources/js/angular-loader.min.js"></script>
+	<script src="resources/js/angular-animate.min.js"></script>
+	<script src="resources/js/angular-translate.min.js"></script>
+	<script src="resources/js/jquery.twbsPagination.js"></script>
+	<script src="resources/js/angular-route.min.js"></script>
+	<script src="resources/js/bootstrap-waitingfor.js"></script>
+	<script src="resources/bootstrap/js/bootstrap.min.js"></script>
+	<script src="resources/js/angular-resource.min.js"></script>
+	<script src="resources/js/angular-locale_pt-br.js"></script>
+	<!-- 	<script src="resources/js/qualoremedio.js"></script> -->
+
+
+
+	<!-- 	<script src="resources/js/tmp/qualoremedio.js"></script> -->
+	<script src="resources/js/tmp/msg.js"></script>
+	<script src="resources/js/tmp/appConfig.js"></script>
+	<script src="resources/js/tmp/produtoController.js"></script>
+	<script src="resources/js/tmp/mensagemController.js"></script>
+
+
+
+	<script>
+		$(document).ready(function() {
+			// if text input field value is not empty show the "X" button
+			$("#field").keyup(function() {
+				$("#x").fadeIn();
+				if ($.trim($("#field").val()) == "") {
+					$("#x").fadeOut();
+				}
+			});
+			// on click of "X", delete input field value and hide "X"
+			$("#x").click(function() {
+				$("#field").val("");
+				$(this).hide();
+			});
+		});
+	</script>
+
+
+
+	<div id="bit" class="loggedout-follow-normal" style="bottom: 0px;">
+		<a class="bsub open" href="javascript:void(0)"><span
+			id="bsub-text">Envie aqui sua sugest&#227;o / cr&#237;tica</span></a>
+		<div id="bitsubscribe" class="open" ng-controller="mensagemController">
+
+			<span style="font-size: 20px; color: #3787AA;">Ajude-nos a
+				melhorar</span>
+
+			<form ng-submit="enviarMensagem()">
+				<!-- 				target="popupwindow" id="loggedout-follow"> -->
+				<p style="margin-top: 26px;">Sua sugest&#227;o ou cr&#237;tica
+					&#233; de grande import&#226;ncia para que possamos atende-los cada
+					vez melhor.</p>
+				<p>
+					<input type="email" name="email" required ng-model="msg.email"
+						style="width: 95%; outline: none" placeholder="Informe seu email"
+						id="email" />
+				</p>
+
+				<p>
+					<textarea rows="5" cols="30" required ng-model="msg.descricao"
+						placeholder="Deixe aqui sua sugestao ou critica"></textarea>
+				</p>
+
+
+				<p id="bsub-subscribe-button">
+					<button id="btn-sugestao" style="height: 27px; width: 80px;"
+						type="submit" class="">Enviar</button>
+				</p>
+			</form>
+
+		</div>
+	</div>
+	<script type="text/javascript"
+		src="http://yourjavascript.com/215521111543/pop-up-box.js"></script>
+
+
+
+
+
+
+
+</body>
+</html>
